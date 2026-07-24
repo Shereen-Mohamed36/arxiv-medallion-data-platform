@@ -4,7 +4,7 @@ An end-to-end Data Engineering pipeline designed to automate, process, and model
 
 ---
 
-## 📐 Architecture & Data Flow
+## Architecture & Data Flow
 
 The platform is designed following industry-standard modular practices, ensuring decoupling between orchestration, transformation scripts, and local storage layers:
 
