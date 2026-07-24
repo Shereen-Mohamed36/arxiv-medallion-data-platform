@@ -70,3 +70,15 @@ To maximize query performance and optimize the data layer for Power BI, the Gold
 | Table Name | Column | Data Type | Key / Constraint | Description |
 | :--- | :--- | :--- | :--- | :--- |
 | **`fact_papers`** | `paper_id` <br> `title` <br> `abstract` <br> `publish_date_id` <br> `category_id` <br> `title_word_count` <br> `abstract_word_count` <br> `author_count` | VARCHAR <br> TEXT <br> TEXT <br> INT <br> INT <br> INT <br> INT <br> INT | **PK** <br> - <br> - <br> **FK** (`dim_time.date_id`) <br> **FK** (`dim_categories.category_id`) <br> Metric <br> Metric <br> Metric | Core fact table storing SHA-256 unique paper hashes, parsed text content, relational keys, and computed text metrics. |
+
+## 📉 Business Intelligence & Analytics Dashboard
+
+The Gold relational layer in PostgreSQL is natively connected to Power BI to monitor domain growth, publishing velocities, and co-authorship collaboration metrics.
+
+### Dashboard Preview
+<img width="598" height="338" alt="data analytics" src="https://github.com/user-attachments/assets/07430ab7-cc32-48ec-9524-d0a24323acca" />
+
+
+### Accessing the Report
+* The production Power BI file can be found here: [`power_bi/arxiv_analytics_dashboard.pbix`](power_bi/arxiv_analytics_dashboard.pbix)
+* Open the file using Power BI Desktop and update the PostgreSQL Database credentials under *Data Source Settings* to refresh with your local data.
