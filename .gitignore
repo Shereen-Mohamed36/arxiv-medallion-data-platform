@@ -1,11 +1,8 @@
 # Ignore Airflow logs
 logs/
 
-# Ignore simulated local data lake storage
-data/raw/
-data/cleaned/
-cleaned_master_data/
-analytics_results/
+
+
 
 # Ignore Python cache
 __pycache__/
